@@ -79,6 +79,7 @@ function SwiperCard(props) {
                             <div
                                 style={{
                                     display: "flex",
+                                    gap: "8px",
                                 }}
                             >
                                 <Caption1
@@ -110,6 +111,7 @@ function SwiperCard(props) {
                         <div
                             style={{
                                 display: "flex",
+                                gap: "8px",
                             }}
                         >
                             <Caption1

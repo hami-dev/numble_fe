@@ -21,13 +21,17 @@ function MainPage() {
                     isTimeDeal
                 />
             </Section>
+            <SectionSpacer />
             <Section title="MD 추천 클래스">
                 <CarouselComponent
                     data={mdRecommend.md_recommend}
                     cardCount="4"
                     isLongHeight
+                    isRecommend
                 />
             </Section>
+            <SectionSpacer />
+
             <Section title="진행중인 인기 이벤트">
                 <CarouselComponent
                     data={popularEvent.popular_event}
@@ -35,8 +39,14 @@ function MainPage() {
                     isEvent
                 />
             </Section>
+            <SectionSpacer />
+
             <Section title="오픈 예정 클래스">
-                <CarouselComponent data={openSoon.open_soon} cardCount="4" />
+                <CarouselComponent
+                    data={openSoon.open_soon}
+                    cardCount="4"
+                    isOpenSoon
+                />
             </Section>
         </MainWrapper>
     );
@@ -45,6 +55,10 @@ function MainPage() {
 const MainWrapper = styled.div`
     max-width: 1176px;
     margin: 0 auto;
+`;
+
+const SectionSpacer = styled.div`
+    margin-top: 36px;
 `;
 
 export default MainPage;
